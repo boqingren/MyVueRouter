@@ -39,7 +39,10 @@
 			"react/jsx-indent-props": [ 4, "tab" ],
 			"no-nested-ternary": 1,
 			"semi": ["error", "always"],
-			"eol-last": ["error", "never"]
+			"eol-last": ["error", "never"],
+			"no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+			"space-before-function-paren": ["error", "never"],
+			"space-infix-ops": ["off"]
 		},
 		"parserOptions": {
 			"parser": "babel-eslint"

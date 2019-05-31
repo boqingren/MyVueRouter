@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <title>History Theory</title>
+    <style type="text/css">
+        .history-pointer { cursor: pointer }
+        #historyContent { margin-left: 15px }
+    </style>
+</head>
+
+<body>
+    <ol class="breadcrumb">
+        <li class="history-pointer"><a onclick="go('/home')">Home</a></li>
+        <li class="history-pointer"><a onclick="go('/about')">About</a></li>
+    </ol>
+    <div id="historyContent"></div>
+
+    <script type="text/javascript">
+        // history 路由的原理（使用 history 路由很有可能话导致 404 的发生）
+        window.onload = function() {
+            var historyContent = document.getElementById("historyContent");
+
+            // 定义一个函数当浏览器的 history 发生变化时，调用 pushState 往浏览器的历史栈中 push 一个新的 state
+            window.go = function(path) {
+                window.history.pushState({}, null, path);
+                historyContent.innerHTML = path;
+            };
+
+            // 监听 pushState 事件
+            window.addEventListener("popstate", function() {
+                go(window.location.pathname);
+            });
+        };
+    </script>
+</body>
+</html>

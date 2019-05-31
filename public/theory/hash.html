@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <title>Hash Theory</title>
+    <style type="text/css">
+        .hash-pointer { cursor: pointer }
+        #hashContent { margin-left: 15px }
+    </style>
+</head>
+
+<body>
+    <ol class="breadcrumb">
+        <li class="hash-pointer"><a href="#/home">Home</a></li>
+        <li class="hash-pointer"><a href="#/about">About</a></li>
+    </ol>
+    <div id="hashContent"></div>
+
+    <script type="text/javascript">
+        // hash 路由的原理
+        window.onload = function() {
+            // 初始化页面的时候获取去掉 "#" 的 hash 值
+            var hashContent = document.getElementById("hashContent");
+            window.location.hash = window.location.hash || "/";
+            hashContent.innerHTML = window.location.hash.slice(1);
+
+            // 监听 hash 路径的变化
+            window.addEventListener("hashchange", function() {
+                hashContent.innerHTML = window.location.hash.slice(1);
+            });
+        };
+    </script>
+</body>
+</html>
