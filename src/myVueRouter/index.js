@@ -4,10 +4,8 @@ class MyVueRouter {
     // 使用 Vue.use 注册插件，会默认调用插件的 install 方法，对应到 Class 就是类的静态方法 install
     // 详情参考 Vue 官网：https://cn.vuejs.org/v2/guide/plugins.html
     static install(Vue, options) {                                          // 第一个参数就是 Vue 这个大类，第二个参数是可配置的选项
-        console.log("install", options);
         Vue.mixin({                                                         // 全局注册一个混入，影响注册之后所有创建的每个 Vue 实例。插件作者可以使用混入，向组件注入自定义的行为
             beforeCreate() {
-                // console.log(this);
                 MyVueRouter.mountOneRouterToAllVM(Vue, this);
                 MyVueRouter.defineRouter(this);                             // 这里的 this 并不是 MyVueRouter 的实例，而是 Vue 的实例，而且 static 的方法是不能访问当前类的实例的
                 MyVueRouter.defineRoute(this);
@@ -25,16 +23,16 @@ class MyVueRouter {
             MyVueRouter.subscribeHistoryChange(Vue, vm);
         } else {                                                            // 子组件和孙子组件往上回溯父组件的 _root 和 _router 属性，将他们挂载在自身上
             vm._root = vm.$parent._root;                                    // 把 父组件的 _root 属性挂载在当前 Vue 的实例上
-            vm._router = vm.$parent.router;                                 // 把 父组件的 _router 属性挂载在当前 Vue 的实例上
+            // vm._router = vm.$parent.router;                              // 把 父组件的 _router 属性挂载在当前 Vue 的实例上
         }
     }
 
     // 深度劫持
     // observer（订阅 history 中的 current 属性变化）
     // 如果 history 中的 current 属性变化，也会属性视图
-    // vm.__history__ = vm.router.history 起别名
+    // vm.__history__ = vm._router.history 起别名
     static subscribeHistoryChange(Vue, vm) {
-        Vue.util.defineReactive(vm, "__history__", vm._root.history);
+        Vue.util.defineReactive(vm, "__history__", vm._router.history);
     }
 
     static defineRouter(vm) {                                               // 为所有 Vue 的实例定义一个叫做 "$router" 的属性
@@ -64,7 +62,7 @@ class MyVueRouter {
             render(createElement) {
                 const { _self: self, to, $slots } = this;
                 const { mode } = self._root._router;
-                return <a href={mode ==="hash"? `#${to}`: this.to}>{$slots.default}</a>;
+                return <a href={mode === "hash"? `#${to}`: to}>{$slots.default}</a>;
             }
         });
     }
@@ -103,20 +101,20 @@ class MyVueRouter {
 
     handleHashMode() {
         window.location.hash = window.location.hash || "/";
-        window.addEventListener("load", function() {                        // 页面初始化的时候把当前的 hash 值保存到 this.history.current
+        window.addEventListener("load", () => {                             // 页面初始化的时候把当前的 hash 值保存到 this.history.current
             this.history.current = window.location.hash.slice(1);
         });
-        window.addEventListener("hashchange", function() {                  // hash 值变化的时候把当前的 hash 值保存到 this.history.current
+        window.addEventListener("hashchange", () => {                       // hash 值变化的时候把当前的 hash 值保存到 this.history.current
             this.history.current = window.location.hash.slice(1);
         });
     }
 
     handleHistoryMode() {
         window.location.pathname = window.location.pathname || "/";
-        window.addEventListener("load", function() {                        // 页面初始化的时候把当前的 pathname 保存到 this.history.current
+        window.addEventListener("load", () => {                             // 页面初始化的时候把当前的 pathname 保存到 this.history.current
             this.history.current = window.location.pathname;
         });
-        window.addEventListener("popstate", function() {                    // history 值变化的时候把当前的 pathname 保存到 this.history.current
+        window.addEventListener("popstate", () => {                         // history 值变化的时候把当前的 pathname 保存到 this.history.current
             this.history.current = window.location.pathname;
         });
     }
