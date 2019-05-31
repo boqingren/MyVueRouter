@@ -1,47 +1,57 @@
 {
-  "name": "vuerouter",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+	"name": "vuerouter",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"core-js": "^2.6.5",
+		"vue": "^2.6.10"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.8.0",
+		"@vue/cli-plugin-eslint": "^3.8.0",
+		"@vue/cli-service": "^3.8.0",
+		"@vue/eslint-config-standard": "^4.0.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.16.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"eslintConfig": {
+		"root": true,
+			"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"@vue/standard"
+		],
+		"rules": {
+			"linebreak-style": 0,
+			"indent": ["error", 4, { "SwitchCase": 1 }],
+			"comma-dangle": [2, "never"],
+			"quotes": ["error", "double", { "avoidEscape": true }],
+			"react/jsx-indent": [ 4, "tab" ],
+			"react/jsx-indent-props": [ 4, "tab" ],
+			"no-nested-ternary": 1,
+			"semi": ["error", "always"],
+			"eol-last": ["error", "never"]
+		},
+		"parserOptions": {
+			"parser": "babel-eslint"
+		}
+	},
+	"postcss": {
+		"plugins": {
+		"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	]
 }
