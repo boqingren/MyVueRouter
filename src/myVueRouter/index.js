@@ -59,7 +59,7 @@ class MyVueRouter {
             props: {
                 to: String,
                 tag: String,
-                class: String
+                className: String
             },
             methods: {
                 handleClick(myVueRouter, to) {
@@ -67,13 +67,12 @@ class MyVueRouter {
                 }
             },
             render(createElement) {                                                 // 在 render 方法中 this 是一个特殊的 Proxy 对象，Proxy 对象下的 _self 属性只向当前的 Vue 组件
-                const { tag, class: className, to, $slots, _self: self } = this;
+                const { tag, className, to, $slots, _self: self } = this;
                 const { mode } = self._root._router;
                 const Tag = tag || "a";
-                // debugger;
                 return (
                     <Tag
-                        className={className}
+                        class={className}
                         href={mode === "hash"? `#${to}`: to}
                         on-click={() => this.handleClick(self, to)}
                     >
@@ -137,15 +136,18 @@ class MyVueRouter {
     }
 
     // TODO
-    go() {
+    go(count) {
+        window.history.go(count);
     }
 
     // TODO
     back() {
+        window.history.back();
     }
 
     // TODO
-    push() {
+    push(path) {
+        this.history.current = path;
     }
 };
 
