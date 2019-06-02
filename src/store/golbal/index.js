@@ -10,17 +10,3 @@ export default {
     actions,
     getters
 };
-
-// actions: {
-//     initActives() {
-
-//     },
-//     setActives() {
-
-//     }
-// },
-// getters: {
-//     actives(state) {
-//         return state.actives;
-//     }
-// }

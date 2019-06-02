@@ -1,4 +1,4 @@
-import { mapState, mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 const Li = context => {
     const { props, children, listeners } = context;
@@ -25,14 +25,11 @@ export default {
         })));
     },
     methods: {
-        // 从 Vuex 里读取
         handleClick(idx) {
-            this.setActives(this.actives.map((item, index) => {
-                return {
-                    ...item,
-                    isActive: idx === index? true: false
-                };
-            }));
+            this.setActives(this.actives.map((item, index) => ({
+                ...item,
+                isActive: idx === index? true: false
+            })));
         },
         ...mapActions({
             setActives: "golbal/setActives"

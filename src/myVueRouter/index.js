@@ -147,7 +147,8 @@ class MyVueRouter {
 
     // TODO
     push(path) {
-        this.history.current = path;
+        if (this.mode === "hash") window.location.hash = path;
+        else window.location.pathname = path;
     }
 };
 

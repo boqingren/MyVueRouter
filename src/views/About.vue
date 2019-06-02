@@ -11,16 +11,32 @@
 </template>
 
 <script>
+	import { mapActions, mapGetters } from "vuex";
+
 	export default {
 		name: "about",
 		methods: {
 			handleGoHome() {
-				this.$router.push("/home");
+				const path = "/home";
+				this.$router.push(path);
+				this.handleGoPageActive(path);
 			},
 			handleGoBack() {
 				this.$router.back();
-			}
-		}
+				const path = this.$router.mode === "hash"? window.location.hash.slice(1): window.location.pathname;
+				console.log(`about page path: ${path}`);
+				this.handleGoPageActive(path);
+			},
+			...mapActions({
+				setActives: "golbal/setActives",
+				handleGoPageActive: "golbal/handleGoPageActive"
+			})
+		},
+		computed: {
+			...mapGetters({
+				actives: "golbal/actives"
+			})
+    	}
 	};
 </script>
 
