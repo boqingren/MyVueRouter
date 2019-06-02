@@ -1,3 +1,5 @@
+import { mapState, mapActions, mapGetters } from "vuex";
+
 const Li = context => {
     const { props, children, listeners } = context;
     const isActive = props.activeInfo && props.activeInfo.isActive;
@@ -15,27 +17,31 @@ const Li = context => {
 
 export default {
     name: "navigation",
-    data() {
-        return {
-            actives: []
-        };
-    },
     mounted() {
         const list = Array.isArray(this.$children)? this.$children: [];
-        this.actives = list.map((item, index) => ({
+        this.setActives(list.map((item, index) => ({
             isActive: index === 0? true: false,
             path: item.$options.propsData.to
-        }));
+        })));
     },
     methods: {
+        // 从 Vuex 里读取
         handleClick(idx) {
-            this.actives = this.actives.map((item, index) => {
+            this.setActives(this.actives.map((item, index) => {
                 return {
                     ...item,
                     isActive: idx === index? true: false
                 };
-            });
-        }
+            }));
+        },
+        ...mapActions({
+            setActives: "golbal/setActives"
+        })
+    },
+    computed: {
+        ...mapGetters({
+            actives: "golbal/actives"
+        })
     },
     render(createElement) {
         const { default: children } = this.$slots;

@@ -1,0 +1,1 @@
+export const GOLBAL_SET_ACTIVES = "set_actives";
