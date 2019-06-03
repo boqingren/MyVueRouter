@@ -21,12 +21,12 @@
 				this.$router.push(path);
 				this.handleGoPageActive(path);
 			},
-			handleGoBack() {
-				this.$router.back();
-				const path = this.$router.mode === "hash"? window.location.hash.slice(1): window.location.pathname;
-				console.log(`mome page path: ${path}`);
-				this.handleGoPageActive(path);
-			},
+			// handleGoBack() {
+			// 	this.$router.back();
+			// 	const path = this.$router.mode === "hash"? window.location.hash.slice(1): window.location.pathname;
+			// 	console.log(`mome page path: ${path}`);
+			// 	this.handleGoPageActive(path);
+			// },
 			...mapActions({
 				setActives: "golbal/setActives",
 				handleGoPageActive: "golbal/handleGoPageActive"
