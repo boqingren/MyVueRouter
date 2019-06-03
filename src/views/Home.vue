@@ -4,9 +4,9 @@
 		<button class="btn btn-success go-home" @click="handleGoAbout">
 			Go About
 		</button>
-		<button class="btn btn-default go-back" @click="handleGoBack">
+		<!-- <button class="btn btn-default go-back" @click="handleGoBack">
 			Go Back
-		</button>
+		</button> -->
 	</div>
 </template>
 
