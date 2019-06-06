@@ -7,24 +7,22 @@ class MockHttp {
         this.delay = delay;
     }
 
-    get(url, options) {
-        return new Promise((resolve, reject) => {
+    request(url, options) {
+        return (resolve, reject) => {
             const timer = setTimeout(() => {
                 const data = this.proxy[url](options);
                 clearTimeout(timer);
                 resolve(data);
             }, this.delay);
-        });
+        };
+    }
+
+    get(url, options) {
+        return new Promise(this.request(url, options));
     }
 
     post(url, options) {
-        return new Promise((resolve, reject) => {
-            const timer = setTimeout(() => {
-                const data = this.proxy[url](options);
-                clearTimeout(timer);
-                resolve(data);
-            }, this.delay);
-        });
+        return new Promise(this.request(url, options));
     }
 }
 
