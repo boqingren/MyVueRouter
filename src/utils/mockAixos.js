@@ -6,20 +6,20 @@ class MockAixos {
         this.delay = delay;
     }
 
-    get(url) {
+    get(url, options) {
         return new Promise((resolve, reject) => {
             const timer = setTimeout(() => {
-                const data = this.proxy[url];
+                const data = this.proxy[url](options);
                 clearTimeout(timer);
                 resolve(data);
             }, this.delay);
         });
     }
 
-    post(url) {
+    post(url, options) {
         return new Promise((resolve, reject) => {
             const timer = setTimeout(() => {
-                const data = this.proxy[url];
+                const data = this.proxy[url](options);
                 clearTimeout(timer);
                 resolve(data);
             }, this.delay);

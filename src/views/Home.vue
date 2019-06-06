@@ -18,7 +18,7 @@
 		name: "home",
 		// 方法一：使用模拟的 mockAixos 获取数据
 		async mounted() {
-			const data = await mockAixos.post("/api/user/list");
+			const data = await mockAixos.post("/api/user/list", { maxId: 75067 });
 			console.log("data: ", data);
 		},
 
