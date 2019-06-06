@@ -37,16 +37,18 @@
                     </tr>
                 </tbody>
             </table>
-			<div class="text-center" v-if="!userList.length">
-				暂无数据 ……
-			</div>
         </div>
+
+		<div class="text-center" v-if="!userList.length">
+			暂无数据 ……
+		</div>
 	</div>
 </template>
 
 <script>
 	import { mapActions, mapGetters } from "vuex";
-	import mockAixos from "../utils/mockAixos";
+	import mock from "../mock";
+	const { http: mockHttp } = mock;
 
 	export default {
 		name: "home",
@@ -56,16 +58,16 @@
 				userList: []
 			}
 		},
-		// 方法一：使用模拟的 mockAixos 获取数据
+		// 方法一：使用模拟的 mockHttp 获取数据
 		async mounted() {
 			const maxId = this.inputId? this.inputId: 0;
-			const { data } = await mockAixos.post("/api/user/list", { maxId });
+			const { data } = await mockHttp.post("/api/user/list", { maxId });
 			this.userList = Array.isArray(data.list)? data.list: [];
 		},
 
-		// 方法二：使用模拟的 mockAixos 获取数据
+		// 方法二：使用模拟的 mockHttp 获取数据
 		// mounted() {
-		// 	mockAixos.post("/api/user/list").then(data => {
+		// 	mockHttp.post("/api/user/list").then(data => {
 		// 		console.log("data: ", data);
 		// 	});
 		// },
@@ -98,7 +100,7 @@
 			async inputId(newVal, oldVal) {
 				const maxId = newVal? newVal: 0
 				if (newVal !== oldVal) {
-					const { data } = await mockAixos.post("/api/user/list", { maxId });
+					const { data } = await mockHttp.post("/api/user/list", { maxId });
 					this.userList = Array.isArray(data.list)? data.list: [];
 				}
 			}

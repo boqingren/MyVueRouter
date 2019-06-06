@@ -1,6 +1,7 @@
-import mockData from "../mockData";
+import config from "./config";
+import initStorage from "./utils/initStorage";
 
-class MockAixos {
+class MockHttp {
     constructor({ proxy, delay = 500 }) {
         this.proxy = proxy;
         this.delay = delay;
@@ -27,4 +28,7 @@ class MockAixos {
     }
 }
 
-export default new MockAixos(mockData);
+export default {
+    init: initStorage,
+    http: new MockHttp(config)
+};
