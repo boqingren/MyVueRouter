@@ -7,6 +7,40 @@
 		<!-- <button class="btn btn-default go-back" @click="handleGoBack">
 			Go Back
 		</button> -->
+
+		<div class="inputContainer">
+			<label for="inputId">输入框最大的 ID 值：</label>
+			<input
+				id="inputId"
+				type="text"
+				placeholder="范围值：0 - 10"
+				v-model.number="inputId"
+			/>
+		</div>
+
+		<div class="table-responsive tableContainer">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">id</th>
+                        <th class="text-center">username</th>
+                        <th class="text-center">nickname</th>
+                        <th class="text-center">password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(user, index) in userList" :key="index">
+                        <th class="text-center">{{user.id}}</th>
+                        <th class="text-center">{{user.username}}</th>
+                        <th class="text-center">{{user.nickname}}</th>
+                        <th class="text-center">{{user.password}}</th>
+                    </tr>
+                </tbody>
+            </table>
+			<div class="text-center" v-if="!userList.length">
+				暂无数据 ……
+			</div>
+        </div>
 	</div>
 </template>
 
@@ -16,10 +50,17 @@
 
 	export default {
 		name: "home",
+		data() {
+			return {
+				inputId: null,
+				userList: []
+			}
+		},
 		// 方法一：使用模拟的 mockAixos 获取数据
 		async mounted() {
-			const data = await mockAixos.post("/api/user/list", { maxId: 75067 });
-			console.log("data: ", data);
+			const maxId = this.inputId? this.inputId: 0;
+			const { data } = await mockAixos.post("/api/user/list", { maxId });
+			this.userList = Array.isArray(data.list)? data.list: [];
 		},
 
 		// 方法二：使用模拟的 mockAixos 获取数据
@@ -48,8 +89,20 @@
 		computed: {
 			...mapGetters({
 				actives: "golbal/actives"
-			})
-    	}
+			}),
+			userList() {
+				return this.userList;
+			}
+		},
+		watch: {
+			async inputId(newVal, oldVal) {
+				const maxId = newVal? newVal: 0
+				if (newVal !== oldVal) {
+					const { data } = await mockAixos.post("/api/user/list", { maxId });
+					this.userList = Array.isArray(data.list)? data.list: [];
+				}
+			}
+		}
 	};
 </script>
 
@@ -60,5 +113,13 @@
 
 	.go-back {
 		margin-left: 10px;
+	}
+
+	#inputId {
+		text-align: center;
+	}
+
+	.inputContainer, .tableContainer {
+		margin-top: 30px;
 	}
 </style>

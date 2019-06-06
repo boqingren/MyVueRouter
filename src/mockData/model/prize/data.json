@@ -1,0 +1,334 @@
+{
+    "list": [
+        {
+            "prize_id": 1,
+            "rmb": 7919,
+            "popularity": 1,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 1,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 2,
+            "brand_id": 1,
+            "desc": "短标题 C",
+            "prize_name": "长标题 DDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+            "detail_url": "易亲指结专青集主华内空识定共万包。传完美且成去实石值则则济约何人它理山。整属话快正看确种后信验维量。领提名斗党向精果般能记部特油应产。半心亲低很成直完名三观感无。或完看须据列县积件方时元划象标细率作。众还命价它到清日见起在由名口内术。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 B"
+        },
+        {
+            "prize_id": 2,
+            "rmb": 9416,
+            "popularity": 2,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 2,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 0,
+            "brand_id": 2,
+            "desc": "短标题 D",
+            "prize_name": "长标题 CCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+            "detail_url": "且万场叫器发科素法书类机取出她。海可此同会根影眼据育最单可层系。却万起只一身王地开持保品好。划写号米越传习基特引民京开常越参。证道儿记该南性正率类对将且正先。反提年须响强问院或角及数广。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 E"
+        },
+        {
+            "prize_id": 3,
+            "rmb": 4162,
+            "popularity": 3,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 3,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 2,
+            "brand_id": 3,
+            "desc": "短标题 C",
+            "prize_name": "长标题 CCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+            "detail_url": "教社局什须收习重它解间想处从步代术。须问传单手美你书次山自制成进空。般说响去以低酸格光体位四没设合红第。反前革意压就东美小住调离因收工济常。要精张史安速广该家拉民才式到。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533695007931",
+            "brand_name": "品牌 D"
+        },
+        {
+            "prize_id": 4,
+            "rmb": 4752,
+            "popularity": 4,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 4,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 3,
+            "brand_id": 4,
+            "desc": "短标题 B",
+            "prize_name": "长标题 AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "detail_url": "劳状众切重教管目白决度号。白究这就复生压识取除持连战始林却使存。志研资快量使集县么次发安白义总。断斗间样细和一她出书量查再叫。高南更消个约九保铁阶易省示感。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 A"
+        },
+        {
+            "prize_id": 5,
+            "rmb": 8482,
+            "popularity": 5,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 5,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 0,
+            "brand_id": 5,
+            "desc": "短标题 D",
+            "prize_name": "长标题 DDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+            "detail_url": "调及阶变志月理斯后回进感度水府许。劳志世千品种照广路议便制位度者技少。原毛系号完半派样广有制层了及团战养。切之两维支结济表质相自参。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533695105624",
+            "brand_name": "品牌 D"
+        },
+        {
+            "prize_id": 6,
+            "rmb": 3834,
+            "popularity": 6,
+            "participant": 0,
+            "state": 2,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 6,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 3,
+            "brand_id": 6,
+            "desc": "短标题 B",
+            "prize_name": "长标题 BBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "detail_url": "业装做段气车半她极民导不厂如商。查参府来现内面县表权作风合必专队同。新口科算面群集产九便平决要分。知转知青没按更较整府率规战而千。求样府意布没山叫心马接响感。好层样状具进三历周有人行省。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 A"
+        },
+        {
+            "prize_id": 7,
+            "rmb": 910,
+            "popularity": 7,
+            "participant": 0,
+            "state": 2,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 7,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 1,
+            "brand_id": 7,
+            "desc": "短标题 B",
+            "prize_name": "长标题 CCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+            "detail_url": "思家满开质三维万众性增维气。白反从革已数深特意内太按先任据受。门重将安思代证光间毛除决几步化同需。能口族学别经极积公与习除影快。格商龙老已期人包严西且度观条他。建程容场机题十理所天却不民型节。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533695007931",
+            "brand_name": "品牌 E"
+        },
+        {
+            "prize_id": 8,
+            "rmb": 1093,
+            "popularity": 8,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 8,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 0,
+            "brand_id": 8,
+            "desc": "短标题 B",
+            "prize_name": "长标题 DDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+            "detail_url": "角年参他标北物进石正度周直今。完看状该太安土件应建程特传气专义连。里心质易放团想所什组家育安持。由对量效单风都被进接当山。先况本周最团统存日许格布具大新万志。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 A"
+        },
+        {
+            "prize_id": 9,
+            "rmb": 8637,
+            "popularity": 9,
+            "participant": 0,
+            "state": 1,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 9,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 2,
+            "brand_id": 9,
+            "desc": "短标题 E",
+            "prize_name": "长标题 DDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+            "detail_url": "米建角系复见世许头近况形接。来周没里生被般还会可每据。离要文声正来连毛相以难务集指。话军有圆利江系土下无效年利据。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533183961469",
+            "brand_name": "品牌 D"
+        },
+        {
+            "prize_id": 10,
+            "rmb": 7580,
+            "popularity": 10,
+            "participant": 0,
+            "state": 2,
+            "created_at": "2018-08-15 17:43:39",
+            "success_exchange_cnt": 0,
+            "room_id": 10,
+            "kind": [
+                {
+                    "id": 1,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                },
+                {
+                    "id": 2,
+                    "created_at": "2018-09-04T10:14:15+08:00",
+                    "Kind": "热门",
+                    "Popularity": 100,
+                    "State": 1
+                }
+            ],
+            "level": 2,
+            "brand_id": 10,
+            "desc": "短标题 E",
+            "prize_name": "长标题 CCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+            "detail_url": "真状政次过说响置不命转道教安计该众。生了区率色际当做家且样用。据导江时么民农转价达报例角。支出点金到提六同王维义造比计今上。器间江书万当术片放交下原选最节结。今式里铁容示张走东支名圆步验。",
+            "prize_img": "https://static.wawa.gongfutingche.com/coverkey_1533199155152",
+            "brand_name": "品牌 E"
+        }
+    ]
+}
