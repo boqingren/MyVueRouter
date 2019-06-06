@@ -15,7 +15,7 @@ export default class DB {
         });
     }
 
-    getList(options) {
+    getList(url, options) {
         const result = storage.getLocalStorage(this.table);
         const list = Array.isArray(result.list)? result.list: [];
         if (options.maxId) return this.getListByMaxId(list, options);

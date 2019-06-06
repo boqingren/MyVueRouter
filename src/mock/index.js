@@ -10,7 +10,7 @@ class MockHttp {
     request(url, options) {
         return (resolve, reject) => {
             const timer = setTimeout(() => {
-                const data = this.proxy[url](options);
+                const data = this.proxy[url](url, options);
                 clearTimeout(timer);
                 resolve(data);
             }, this.delay);
