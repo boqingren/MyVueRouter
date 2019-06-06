@@ -84,6 +84,9 @@
 			],
 			"no-unneeded-ternary": [
 				"off"
+			],
+			"space-before-function-paren": [
+				"off"
 			]
 		},
 		"parserOptions": {

@@ -12,9 +12,22 @@
 
 <script>
 	import { mapActions, mapGetters } from "vuex";
+	import mockAixos from "../utils/mockAixos";
 
 	export default {
 		name: "home",
+		// 方法一：使用模拟的 mockAixos 获取数据
+		async mounted() {
+			const data = await mockAixos.post("/api/user/list");
+			console.log("data: ", data);
+		},
+
+		// 方法二：使用模拟的 mockAixos 获取数据
+		// mounted() {
+		// 	mockAixos.post("/api/user/list").then(data => {
+		// 		console.log("data: ", data);
+		// 	});
+		// },
 		methods: {
 			handleGoAbout() {
 				const path = "/about";
